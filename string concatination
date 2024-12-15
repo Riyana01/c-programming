@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void concatenate_strings(char *s1, char *s2, char *result) {
+    int i = 0, j = 0;
+    while (s1[i] != '\0') {
+        result[j++] = s1[i++];
+    }
+    i = 0;
+    while (s2[i] != '\0') {
+        result[j++] = s2[i++];
+    }
+    result[j] = '\0';
+}
+
+int main() {
+    char s1[] = "Hello, ";
+    char s2[] = "World!";
+    char result[50];
+    concatenate_strings(s1, s2, result);
+    printf("Concatenated string: %s\n", result);
+    return 0;
+}
